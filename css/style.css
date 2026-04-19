@@ -85,3 +85,7 @@ footer {
     padding: 20px 0;
     margin-top: 50px;
 }
+.nav-links i {
+    margin-right: 5px;
+    color: #e74c3c;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur IMC - GymFit</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        </header>
+
+    <main style="padding: 50px 10%; text-align: center;">
+        <section class="calc-box">
+            <h2><i class="fas fa-calculator"></i> Calculer ton IMC</h2>
+            <p>Entre ton poids et ta taille pour connaître ton indice de masse corporelle.</p>
+            
+            <div class="input-group" style="margin-top: 20px;">
+                <input type="number" id="weight" placeholder="Poids (kg)">
+                <input type="number" id="height" placeholder="Taille (cm)">
+            </div>
+            
+            <button onclick="calculateIMC()" class="btn-main" style="border: none; cursor: pointer; margin-top: 20px;">Calculer</button>
+            
+            <div id="result" style="margin-top: 30px; font-size: 1.5rem; font-weight: bold; color: #e74c3c;"></div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

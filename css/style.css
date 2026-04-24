@@ -109,3 +109,47 @@ footer {
     padding: 20px 0;
     margin-top: 50px;
 }
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.program-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+}
+
+.program-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.program-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.program-content h3 {
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+.price {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #111;
+    font-size: 1.2rem;
+}

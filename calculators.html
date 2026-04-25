@@ -11,20 +11,29 @@
     <header>
         </header>
 
-    <main style="padding: 50px 10%; text-align: center;">
-        <section class="calc-box">
-            <h2><i class="fas fa-calculator"></i> Calculer ton IMC</h2>
-            <p>Entre ton poids et ta taille pour connaître ton indice de masse corporelle.</p>
-            
-            <div class="input-group" style="margin-top: 20px;">
-                <input type="number" id="weight" placeholder="Poids (kg)">
-                <input type="number" id="height" placeholder="Taille (cm)">
+    <main style="padding: 60px 10%; display: flex; justify-content: center;">
+    <section class="imc-card">
+        <div class="imc-header">
+            <i class="fas fa-calculator"></i>
+            <h2>Calculateur IMC</h2>
+        </div>
+        <p>Entrez vos mesures pour obtenir votre Indice de Masse Corporelle.</p>
+        
+        <div class="input-group">
+            <div class="field">
+                <label>Poids (kg)</label>
+                <input type="number" id="poids" placeholder="ex: 75">
             </div>
-            
-            <button onclick="calculateIMC()" class="btn-main" style="border: none; cursor: pointer; margin-top: 20px;">Calculer</button>
-            
-            <div id="result" style="margin-top: 30px; font-size: 1.5rem; font-weight: bold; color: #e74c3c;"></div>
-        </section>
+            <div class="field">
+                <label>Taille (cm)</label>
+                <input type="number" id="taille" placeholder="ex: 180">
+            </div>
+        </div>
+        
+        <button onclick="calculerIMC()" class="btn-calc">Calculer mon IMC</button>
+        
+        <div id="affichage-resultat" class="result-box"></div>
+    </section>
     </main>
 
     <script src="js/script.js"></script>

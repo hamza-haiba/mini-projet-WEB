@@ -1,23 +1,92 @@
-<main style="padding: 50px 10%; background: #fdfdfd;">
-    <section class="contact-container" style="max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
-        <h2 style="text-align: center; color: #111; margin-bottom: 20px;"><i class="fas fa-paper-plane" style="color: #ff4d4d;"></i> Contactez-nous</h2>
-        <p style="text-align: center; color: #666; margin-bottom: 30px;">Une question ? Notre équipe à Marrakech vous répondra dans les plus brefs délais.</p>
-        
-        <form id="contactForm">
-            <div style="margin-bottom: 15px;">
-                <label>Nom Complet :</label>
-                <input type="text" id="nom" placeholder="Votre nom" style="width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - GymFit</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* هاد الستيل هنا غايحل المشكل ديريكت */
+        .contact-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+            margin: 40px auto;
+        }
+        .input-box {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .input-box label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .input-box input, .input-box textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #eee;
+            border-radius: 8px;
+            box-sizing: border-box; /* هادي هي اللي غاتجمعهم وما تخليهمش يخرجوا */
+        }
+        .btn-submit {
+            background: #111;
+            color: white;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .btn-submit:hover { background: #ff4d4d; }
+    </style>
+</head>
+<body style="background-color: #f4f4f4;">
+    <header>
+        <nav class="navbar">
+            <div class="logo">Gym<span>Fit</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> À Propos</a></li>
+                <li><a href="programs.html"><i class="fas fa-dumbbell"></i> Programmes</a></li>
+                <li><a href="calculators.html"><i class="fas fa-calculator"></i> Calculateurs</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="display: flex; justify-content: center; align-items: center; min-height: 80vh;">
+        <section class="contact-card">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <i class="fas fa-envelope-open-text" style="font-size: 3rem; color: #ff4d4d; margin-bottom: 15px;"></i>
+                <h2>Contactez-nous</h2>
             </div>
-            <div style="margin-bottom: 15px;">
-                <label>Email :</label>
-                <input type="email" id="email" placeholder="exemple@mail.com" style="width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
-            </div>
-            <div style="margin-bottom: 20px;">
-                <label>Message :</label>
-                <textarea id="message" rows="4" placeholder="Comment pouvons-nous vous aider ?" style="width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
-            </div>
-            <button type="button" onclick="validerFormulaire()" class="btn-main" style="width: 100%; border: none; cursor: pointer;">Envoyer le Message</button>
-        </form>
-        <div id="statusMsg" style="margin-top: 20px; text-align: center; font-weight: bold;"></div>
-    </section>
-</main>
+            
+            <form id="contactForm">
+                <div class="input-box">
+                    <label>Nom Complet</label>
+                    <input type="text" id="nom" placeholder="Votre nom">
+                </div>
+                <div class="input-box">
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="exemple@mail.com">
+                </div>
+                <div class="input-box">
+                    <label>Message</label>
+                    <textarea id="message" rows="4" placeholder="Comment pouvons-nous vous aider ?"></textarea>
+                </div>
+                <button type="button" onclick="validerFormulaire()" class="btn-submit">Envoyer</button>
+            </form>
+            <div id="statusMsg" style="margin-top: 15px; text-align: center;"></div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

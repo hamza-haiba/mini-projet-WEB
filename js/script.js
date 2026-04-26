@@ -1,6 +1,4 @@
-// --- حاسبة الـ IMC ---
 function calculerIMC() {
-    // شد القيم بـ IDs اللي كاينين فـ HTML الجديد
     const weight = document.getElementById('poids').value;
     const heightCm = document.getElementById('taille').value;
     const resultDiv = document.getElementById('affichage-resultat');
@@ -17,11 +15,10 @@ function calculerIMC() {
         else if (imc < 30) { message = "Surpoids"; color = "#f1c40f"; }
         else { message = "Obésité"; color = "#e74c3c"; }
 
-        // زواق النتيجة
         resultDiv.style.padding = "15px";
         resultDiv.style.borderRadius = "8px";
         resultDiv.style.marginTop = "20px";
-        resultDiv.style.backgroundColor = color + "11"; // لون خفيف
+        resultDiv.style.backgroundColor = color + "11";
         resultDiv.style.border = `1px solid ${color}`;
         resultDiv.style.color = color;
         
@@ -32,7 +29,6 @@ function calculerIMC() {
     }
 }
 
-// --- الفورم ديال Contact ---
 function validerFormulaire() {
     const nom = document.getElementById('nom').value;
     const email = document.getElementById('email').value;

@@ -1,0 +1,10 @@
+import math
+
+print(f"Hypoténuse : {math.hypot(3, 4)}")
+
+print(f"sin(30°) : {math.sin(math.radians(30)):.2f}")
+print(f"cos(60°) : {math.cos(math.radians(60)):.2f}")
+print(f"tan(45°) : {math.tan(math.radians(45)):.2f}")
+
+print(f"log2(1024) : {math.log2(1024)}")
+print(f"log10(100000) : {math.log10(100000)}")
